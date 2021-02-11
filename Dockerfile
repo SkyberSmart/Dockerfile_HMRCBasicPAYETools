@@ -38,6 +38,9 @@ RUN apt-get update \
 #
 ENV DISPLAY=host.docker.internal:0
 
+ENV QT_GRAPHICSSYSTEM=native
+ENV QT_X11_NO_MITSHM=1
+
 #
 # Avoid running the container as root, so create a new user for normal day to day stuff.
 # All of Basic PAYE Tools data will be stored in /home/paye_user/HMRC. Make sure you mount that
